@@ -1,0 +1,78 @@
+# Aider
+.aider*
+
+# Vivado
+*.log
+*.jou
+*.str
+*.backup.jou
+*.backup.log
+.Xil/
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.gen/
+*.sim/
+*.tmp/
+*.xsa
+*.bit
+*.bin
+*.mmi
+*.prm
+*.sh
+*.tcl
+!project_info.tcl
+!i2sProject.tcl
+!design_mysoc.tcl
+
+# LaTeX
+*.aux
+*.fdb_latexmk
+*.log
+*.out
+*.pdf
+*.snm
+*.nav
+*.vrb
+*.toc
+*.bbl
+*.blg
+
+# Node/Next.js
+node_modules/
+.next/
+.npm-cache/
+bun.lock
+
+# Temporary/Copies
+* - Copy/
+cloned copy/
+cloned/
+old/
+ip_repo/.vscode/
+
+# Project specific ignores (materials and large files)
+bahan/
+Integrated-Circuit-Textbooks/
+eecs150/
+artywrap/
+esp32_pcm_test/
+i2sproject/
+i2sref/
+micblaze/
+microblaze_i2s/
+nobufgmux/
+nobufgmux_dds/
+testblock/
+thesi2s/
+verilog/
+vivado-boards/
+ip.txt
+my.code-workspace
+
+# Keep these
+!THESIS_ENHANCEMENTS.md
+!I2S_PRESENTATION_NOTES.md
+!ip_repo/
+!base/
