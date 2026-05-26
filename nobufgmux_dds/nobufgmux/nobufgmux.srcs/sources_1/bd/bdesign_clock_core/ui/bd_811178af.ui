@@ -1,0 +1,53 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.479445",
+   "Default View_TopLeft":"-106,-52",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port usb_uart -pg 1 -lvl 6 -x 1660 -y 280 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port port-id_i2s_ws_0 -pg 1 -lvl 6 -x 1660 -y 460 -defaultsOSRD
+preplace port port-id_i2s_bclk_0 -pg 1 -lvl 6 -x 1660 -y 430 -defaultsOSRD
+preplace port port-id_i2s_data_0 -pg 1 -lvl 6 -x 1660 -y 490 -defaultsOSRD
+preplace port port-id_i2s_mclk_0 -pg 1 -lvl 6 -x 1660 -y 400 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 440 -defaultsOSRD
+preplace inst microblaze_riscv_0 -pg 1 -lvl 3 -x 840 -y 90 -defaultsOSRD
+preplace inst microblaze_riscv_0_local_memory -pg 1 -lvl 4 -x 1260 -y 100 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 2 -x 390 -y 90 -defaultsOSRD
+preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 390 -y 350 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1260 -y 260 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 5 -x 1530 -y 290 -defaultsOSRD
+preplace inst i2s_dds_0 -pg 1 -lvl 5 -x 1530 -y 450 -defaultsOSRD
+preplace netloc clk_wiz_0_locked 1 1 1 220 390n
+preplace netloc mdm_1_debug_sys_rst 1 1 2 220 20 560
+preplace netloc microblaze_riscv_0_Clk 1 1 4 200 180 570 180 1120 340 1400
+preplace netloc reset_1 1 0 2 20 330 NJ
+preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 2 2 NJ 330 1100
+preplace netloc rst_clk_wiz_0_100M_mb_reset 1 2 1 580 120n
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 3 NJ 390 1130 390 1410
+preplace netloc sys_clock_1 1 0 1 NJ 450
+preplace netloc clk_wiz_0_clk_out3 1 1 4 200J 460 NJ 460 NJ 460 1420
+preplace netloc clk_wiz_0_clk_out2 1 1 4 210J 450 NJ 450 NJ 450 1390
+preplace netloc i2s_dds_0_i2s_bclk 1 5 1 1640J 430n
+preplace netloc i2s_dds_0_i2s_ws 1 5 1 NJ 460
+preplace netloc i2s_dds_0_i2s_data 1 5 1 1640J 480n
+preplace netloc i2s_dds_0_i2s_mclk 1 5 1 1640J 400n
+preplace netloc axi_smc_M01_AXI 1 4 1 N 270
+preplace netloc axi_uartlite_0_UART 1 5 1 NJ 280
+preplace netloc microblaze_riscv_0_M_AXI_DP 1 3 1 1110 110n
+preplace netloc microblaze_riscv_0_debug 1 2 1 N 80
+preplace netloc microblaze_riscv_0_dlmb_1 1 3 1 N 70
+preplace netloc microblaze_riscv_0_ilmb_1 1 3 1 N 90
+preplace netloc axi_smc_M00_AXI 1 4 1 1390 250n
+levelinfo -pg 1 0 110 390 840 1260 1530 1660
+pagesize -pg 1 -db -bbox -sgen -110 0 1780 550
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"4",
+   "da_microblaze_riscv_cnt":"1"
+}

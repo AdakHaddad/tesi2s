@@ -282,8 +282,26 @@
           </spirit:parameter>
         </spirit:parameters>
         <spirit:register>
-          <spirit:name>CTRL</spirit:name>
+          <spirit:name>DATA_LEFT</spirit:name>
           <spirit:addressOffset>0x0</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-write</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0x0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>DATA_RIGHT</spirit:name>
+          <spirit:addressOffset>0x4</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-write</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0x0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>CONTROL</spirit:name>
+          <spirit:addressOffset>0x8</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>read-write</spirit:access>
@@ -293,8 +311,8 @@
           </spirit:reset>
         </spirit:register>
         <spirit:register>
-          <spirit:name>SAMPLE</spirit:name>
-          <spirit:addressOffset>0x4</spirit:addressOffset>
+          <spirit:name>RESERVED</spirit:name>
+          <spirit:addressOffset>0xC</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>

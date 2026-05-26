@@ -1,0 +1,297 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu May 21 20:30:44 2026
+# Process ID         : 10452
+# Current directory  : C:/tesi2s/nobufgmux_dds/nobufgmux.runs/synth_1
+# Command line       : vivado.exe -log bdesign_clock_core_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bdesign_clock_core_wrapper.tcl
+# Log file           : C:/tesi2s/nobufgmux_dds/nobufgmux.runs/synth_1/bdesign_clock_core_wrapper.vds
+# Journal file       : C:/tesi2s/nobufgmux_dds/nobufgmux.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-HTVV1N1
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 25601 MB
+# Swap memory        : 10485 MB
+# Total Virtual      : 36087 MB
+# Available Virtual  : 14596 MB
+#-----------------------------------------------------------
+source bdesign_clock_core_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 536.535 ; gain = 221.430
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/tesi2s/ip_repo/tes_1_0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/tesi2s/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:axi_7segment:1.0'. The one found in IP location 'c:/tesi2s/ip_repo/axi_7segment_1_0 copy' will take precedence over the same IP in location c:/tesi2s/ip_repo/axi_7segment_1_0
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 569.297 ; gain = 25.137
+Command: read_checkpoint -auto_incremental -incremental C:/tesi2s/nobufgmux_dds/nobufgmux.srcs/utils_1/imports/synth_1/bdesign_clock_core_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/tesi2s/nobufgmux_dds/nobufgmux.srcs/utils_1/imports/synth_1/bdesign_clock_core_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top bdesign_clock_core_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9604
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:36 ; elapsed = 00:01:08 . Memory (MB): peak = 1327.527 ; gain = 542.535
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6901] identifier 'current_latch_status' is used before its declaration [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/8743/hdl/i2s_dds_slave_lite_v1_0_S00_AXI.v:329]
+INFO: [Synth 8-6157] synthesizing module 'bdesign_clock_core_wrapper' [C:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/hdl/bdesign_clock_core_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bdesign_clock_core' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/synth/bdesign_clock_core.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bdesign_clock_core_axi_smc_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/synth/bdesign_clock_core_axi_smc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_11PT7BT' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1098]
+INFO: [Synth 8-638] synthesizing module 'bd_128c_psr_aclk_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_1/synth/bd_128c_psr_aclk_0.vhd:74]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1243' bound to instance 'U0' of component 'proc_sys_reset' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_1/synth/bd_128c_psr_aclk_0.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1371]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1387]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1413]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1436]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1460]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at 'D:/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'ACT_LO_EXT' of component 'xpm_cdc_single' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:968]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [D:/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [D:/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at 'D:/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'ACT_LO_AUX' of component 'xpm_cdc_single' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1015]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/9438/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1302]
+INFO: [Synth 8-256] done synthesizing module 'bd_128c_psr_aclk_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_1/synth/bd_128c_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_128c_psr_aclk_0' is unconnected for instance 'psr_aclk' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1135]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_128c_psr_aclk_0' is unconnected for instance 'psr_aclk' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1135]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_128c_psr_aclk_0' is unconnected for instance 'psr_aclk' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1135]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_128c_psr_aclk_0' is unconnected for instance 'psr_aclk' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1135]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_128c_psr_aclk_0' has 10 connections declared, but only 6 given [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1135]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_11PT7BT' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1098]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_ZB2HKY' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1386]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m00e_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_32/synth/bd_128c_m00e_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [D:/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [D:/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m00e_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_32/synth/bd_128c_m00e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_ZB2HKY' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1386]
+INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_D61XGU' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1628]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m00arn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_27/synth/bd_128c_m00arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m00arn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_27/synth/bd_128c_m00arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m00awn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_29/synth/bd_128c_m00awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m00awn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_29/synth/bd_128c_m00awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m00bn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_31/synth/bd_128c_m00bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m00bn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_31/synth/bd_128c_m00bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m00rn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_28/synth/bd_128c_m00rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m00rn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_28/synth/bd_128c_m00rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m00wn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_30/synth/bd_128c_m00wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m00wn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_30/synth/bd_128c_m00wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_D61XGU' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1628]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m00s2a_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_26/synth/bd_128c_m00s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m00s2a_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_26/synth/bd_128c_m00s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm01_exit_pipeline_imp_SYWIMA' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1870]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m01e_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_39/synth/bd_128c_m01e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m01e_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_39/synth/bd_128c_m01e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm01_exit_pipeline_imp_SYWIMA' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1870]
+INFO: [Synth 8-6157] synthesizing module 'm01_nodes_imp_1DIRXLK' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2112]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m01arn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_34/synth/bd_128c_m01arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m01arn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_34/synth/bd_128c_m01arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m01awn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_36/synth/bd_128c_m01awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m01awn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_36/synth/bd_128c_m01awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m01bn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_38/synth/bd_128c_m01bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m01bn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_38/synth/bd_128c_m01bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m01rn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_35/synth/bd_128c_m01rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m01rn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_35/synth/bd_128c_m01rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m01wn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_37/synth/bd_128c_m01wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m01wn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_37/synth/bd_128c_m01wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm01_nodes_imp_1DIRXLK' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2112]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_m01s2a_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_33/synth/bd_128c_m01s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_m01s2a_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_33/synth/bd_128c_m01s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_s00a2s_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_20/synth/bd_128c_s00a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_s00a2s_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_20/synth/bd_128c_s00a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1Y1AJY9' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2354]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_s00mmu_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_17/synth/bd_128c_s00mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_s00mmu_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_17/synth/bd_128c_s00mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_s00sic_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_19/synth/bd_128c_s00sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_s00sic_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_19/synth/bd_128c_s00sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_s00tr_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_18/synth/bd_128c_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_s00tr_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_18/synth/bd_128c_s00tr_0.sv:53]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_128c_s00tr_0' is unconnected for instance 's00_transaction_regulator' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2753]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_128c_s00tr_0' is unconnected for instance 's00_transaction_regulator' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2753]
+WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_128c_s00tr_0' has 82 connections declared, but only 80 given [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2753]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1Y1AJY9' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2354]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1SVIJDN' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2836]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_sarn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_21/synth/bd_128c_sarn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_sarn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_21/synth/bd_128c_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_sawn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_23/synth/bd_128c_sawn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_sawn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_23/synth/bd_128c_sawn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_sbn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_25/synth/bd_128c_sbn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_sbn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_25/synth/bd_128c_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_srn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_22/synth/bd_128c_srn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_srn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_22/synth/bd_128c_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_swn_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_24/synth/bd_128c_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_swn_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_24/synth/bd_128c_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1SVIJDN' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:2836]
+INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_1042BV3' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:3078]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_arinsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_2/synth/bd_128c_arinsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_arinsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_2/synth/bd_128c_arinsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_aroutsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_7/synth/bd_128c_aroutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_aroutsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_7/synth/bd_128c_aroutsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_awinsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_4/synth/bd_128c_awinsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_awinsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_4/synth/bd_128c_awinsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_awoutsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_9/synth/bd_128c_awoutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_awoutsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_9/synth/bd_128c_awoutsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_binsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_6/synth/bd_128c_binsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_binsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_6/synth/bd_128c_binsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_boutsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_11/synth/bd_128c_boutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_boutsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_11/synth/bd_128c_boutsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'i_nodes_imp_JF9UPJ' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1144]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_arni_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_12/synth/bd_128c_arni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_arni_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_12/synth/bd_128c_arni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_awni_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_14/synth/bd_128c_awni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_awni_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_14/synth/bd_128c_awni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_bni_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_16/synth/bd_128c_bni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_bni_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_16/synth/bd_128c_bni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_rni_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_13/synth/bd_128c_rni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_rni_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_13/synth/bd_128c_rni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_wni_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_15/synth/bd_128c_wni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_wni_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_15/synth/bd_128c_wni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'i_nodes_imp_JF9UPJ' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:1144]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_rinsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_3/synth/bd_128c_rinsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_rinsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_3/synth/bd_128c_rinsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_routsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_8/synth/bd_128c_routsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_routsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_8/synth/bd_128c_routsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_winsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_5/synth/bd_128c_winsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_winsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_5/synth/bd_128c_winsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_128c_woutsw_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_10/synth/bd_128c_woutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c_woutsw_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/ip/ip_10/synth/bd_128c_woutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_1042BV3' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:3078]
+INFO: [Synth 8-6155] done synthesizing module 'bd_128c' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/bd_0/synth/bd_128c.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'bdesign_clock_core_axi_smc_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_smc_0/synth/bdesign_clock_core_axi_smc_0.v:53]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'bdesign_clock_core_axi_smc_0' is unconnected for instance 'axi_smc' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/synth/bdesign_clock_core.v:132]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'bdesign_clock_core_axi_smc_0' is unconnected for instance 'axi_smc' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/synth/bdesign_clock_core.v:132]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'bdesign_clock_core_axi_smc_0' has 59 connections declared, but only 57 given [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/synth/bdesign_clock_core.v:132]
+INFO: [Synth 8-638] synthesizing module 'bdesign_clock_core_axi_uartlite_0_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_uartlite_0_0/synth/bdesign_clock_core_axi_uartlite_0_0.vhd:86]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_uartlite' declared at 'c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1951' bound to instance 'U0' of component 'axi_uartlite' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_uartlite_0_0/synth/bdesign_clock_core_axi_uartlite_0_0.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2013]
+INFO: [Synth 8-638] synthesizing module 'uartlite_core' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1479]
+INFO: [Synth 8-638] synthesizing module 'baudrate' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1288]
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1288]
+INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:794]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at 'D:/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'INPUT_DOUBLE_REGS3' of component 'xpm_cdc_single' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:854]
+INFO: [Synth 8-638] synthesizing module 'axi_uartlite_v2_0_39_srl_fifo' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite_v2_0_39_srl_fifo' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:794]
+INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:306]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:306]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1479]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2013]
+INFO: [Synth 8-256] done synthesizing module 'bdesign_clock_core_axi_uartlite_0_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_axi_uartlite_0_0/synth/bdesign_clock_core_axi_uartlite_0_0.vhd:86]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'bdesign_clock_core_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/synth/bdesign_clock_core.v:190]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'bdesign_clock_core_axi_uartlite_0_0' has 22 connections declared, but only 21 given [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/synth/bdesign_clock_core.v:190]
+INFO: [Synth 8-6157] synthesizing module 'bdesign_clock_core_clk_wiz_0_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_clk_wiz_0_0/bdesign_clock_core_clk_wiz_0_0.v:67]
+INFO: [Synth 8-6157] synthesizing module 'bdesign_clock_core_clk_wiz_0_0_clk_wiz' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_clk_wiz_0_0/bdesign_clock_core_clk_wiz_0_0_clk_wiz.v:67]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82804]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82804]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 7.625000e+00 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 1.000000e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 7.625000e+00 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 31 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 34 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'bdesign_clock_core_clk_wiz_0_0_clk_wiz' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_clk_wiz_0_0/bdesign_clock_core_clk_wiz_0_0_clk_wiz.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'bdesign_clock_core_clk_wiz_0_0' (0#1) [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_clk_wiz_0_0/bdesign_clock_core_clk_wiz_0_0.v:67]
+INFO: [Synth 8-6157] synthesizing module 'bdesign_clock_core_i2s_dds_0_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_i2s_dds_0_0/synth/bdesign_clock_core_i2s_dds_0_0.v:53]
+ERROR: [Synth 8-7136] In the module 'i2s_dds' declared at 'c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ipshared/8743/hdl/i2s_dds.v:15', parameter 'C_S00_AXI_DATA_WIDTH' used as named parameter override, does not exist [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_i2s_dds_0_0/synth/bdesign_clock_core_i2s_dds_0_0.v:153]
+ERROR: [Synth 8-6156] failed synthesizing module 'bdesign_clock_core_i2s_dds_0_0' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_i2s_dds_0_0/synth/bdesign_clock_core_i2s_dds_0_0.v:53]
+ERROR: [Synth 8-6156] failed synthesizing module 'bdesign_clock_core' [c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/synth/bdesign_clock_core.v:13]
+ERROR: [Synth 8-6156] failed synthesizing module 'bdesign_clock_core_wrapper' [C:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/hdl/bdesign_clock_core_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:25 ; elapsed = 00:02:06 . Memory (MB): peak = 2040.941 ; gain = 1255.949
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+180 Infos, 16 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:02:44 . Memory (MB): peak = 2040.941 ; gain = 1444.164
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu May 21 20:34:06 2026...

@@ -1,0 +1,16 @@
+// Mem file initialization records.
+//
+// SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+// Vivado v2025.2 (64-bit)
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+// Created on Thursday May 21, 2026 - 08:43:37 pm, from:
+//
+//     Map file     - c:\tesi2s\nobufgmux_dds\nobufgmux.gen\sources_1\bd\bdesign_clock_core\bdesign_clock_core.bmm
+//     Data file(s) - c:/tesi2s/nobufgmux_dds/nobufgmux.gen/sources_1/bd/bdesign_clock_core/ip/bdesign_clock_core_microblaze_riscv_0_0/data/riscv_bootloop.elf
+//
+// Address space 'bdesign_clock_core_i_microblaze_riscv_0.bdesign_clock_core_i_microblaze_riscv_0_local_memory_lmb_bram_128K_2_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@0000000000000000
+    0000006F
