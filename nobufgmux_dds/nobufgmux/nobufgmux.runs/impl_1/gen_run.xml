@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1779805127">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1779807208">
   <File Type="PA-TCL" Name="bdesign_clock_core_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="bdesign_clock_core_wrapper_reports.tcl"/>
   <File Type="INIT-TIMING" Name="bdesign_clock_core_wrapper_timing_summary_init.rpt"/>

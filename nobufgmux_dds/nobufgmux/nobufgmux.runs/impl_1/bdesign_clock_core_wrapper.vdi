@@ -663,3 +663,191 @@ Phase 5.1 Global Iteration 0
  Number of Nodes with overlaps = 846
  Number of Nodes with overlaps = 210
  Number of Nodes with overlaps = 108
+ Number of Nodes with overlaps = 63
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.487  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 2b2063ecb
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:24 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.555  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 2820e5893
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:24 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Phase 5 Rip-up And Reroute | Checksum: 2820e5893
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:24 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+Phase 6.1 Delay CleanUp | Checksum: 2820e5893
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:24 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 2820e5893
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:24 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Phase 6 Delay and Skew Optimization | Checksum: 2820e5893
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:02:24 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.555  | TNS=0.000  | WHS=0.009  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 213e231dc
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:26 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Phase 7 Post Hold Fix | Checksum: 213e231dc
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:26 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 2.18943 %
+  Global Horizontal Routing Utilization  = 2.70966 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 213e231dc
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:26 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 213e231dc
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:26 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 24c5abfc1
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:31 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 24c5abfc1
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:31 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.555  | TNS=0.000  | WHS=0.009  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 24c5abfc1
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:31 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Total Elapsed time in route_design: 151.277 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 27ca03336
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:31 . Memory (MB): peak = 1989.184 ; gain = 0.000
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 27ca03336
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:31 . Memory (MB): peak = 1989.184 ; gain = 0.000
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+104 Infos, 13 Warnings, 4 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:02:48 ; elapsed = 00:02:32 . Memory (MB): peak = 1989.184 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_drc -file bdesign_clock_core_wrapper_drc_routed.rpt -pb bdesign_clock_core_wrapper_drc_routed.pb -rpx bdesign_clock_core_wrapper_drc_routed.rpx
+Command: report_drc -file bdesign_clock_core_wrapper_drc_routed.rpt -pb bdesign_clock_core_wrapper_drc_routed.pb -rpx bdesign_clock_core_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/tesi2s/nobufgmux_dds/nobufgmux/nobufgmux.runs/impl_1/bdesign_clock_core_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1989.184 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_methodology -file bdesign_clock_core_wrapper_methodology_drc_routed.rpt -pb bdesign_clock_core_wrapper_methodology_drc_routed.pb -rpx bdesign_clock_core_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file bdesign_clock_core_wrapper_methodology_drc_routed.rpt -pb bdesign_clock_core_wrapper_methodology_drc_routed.pb -rpx bdesign_clock_core_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/tesi2s/nobufgmux_dds/nobufgmux/nobufgmux.runs/impl_1/bdesign_clock_core_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_drc: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 1989.184 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file bdesign_clock_core_wrapper_timing_summary_routed.rpt -pb bdesign_clock_core_wrapper_timing_summary_routed.pb -rpx bdesign_clock_core_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1989.184 ; gain = 0.000
+INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file bdesign_clock_core_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file bdesign_clock_core_wrapper_route_status.rpt -pb bdesign_clock_core_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file bdesign_clock_core_wrapper_power_routed.rpt -pb bdesign_clock_core_wrapper_power_summary_routed.pb -rpx bdesign_clock_core_wrapper_power_routed.rpx
+Command: report_power -file bdesign_clock_core_wrapper_power_routed.rpt -pb bdesign_clock_core_wrapper_power_summary_routed.pb -rpx bdesign_clock_core_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+121 Infos, 14 Warnings, 4 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1989.184 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file bdesign_clock_core_wrapper_clock_utilization_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file bdesign_clock_core_wrapper_bus_skew_routed.rpt -pb bdesign_clock_core_wrapper_bus_skew_routed.pb -rpx bdesign_clock_core_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+generate_parallel_reports: Time (s): cpu = 00:00:53 ; elapsed = 00:00:43 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Writing XDEF routing.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.336 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1989.184 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/tesi2s/nobufgmux_dds/nobufgmux/nobufgmux.runs/impl_1/bdesign_clock_core_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1989.184 ; gain = 0.000
+Command: write_bitstream -force bdesign_clock_core_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 10109568 bits.
+Writing bitstream ./bdesign_clock_core_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+135 Infos, 14 Warnings, 4 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:56 ; elapsed = 00:00:45 . Memory (MB): peak = 2239.828 ; gain = 250.645
+INFO: [Common 17-206] Exiting Vivado at Tue May 26 21:54:07 2026...
