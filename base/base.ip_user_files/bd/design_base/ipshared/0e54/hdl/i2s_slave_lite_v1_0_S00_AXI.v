@@ -10,8 +10,13 @@
 // Clock domains
 // -------------
 //   S_AXI_ACLK    : 100 MHz — AXI bus and register file
-//   internal_mclk : 24.576 MHz (48 kHz family) or 22.579 MHz (44.1 kHz family)
-//                   Selected at runtime by FS_FAMILY control bit via BUFGMUX
+//   audio_clk      : externally-selected audio master clock input
+//                    (24.576 MHz for 48/96 kHz family or 22.579 MHz for
+//                     44.1/88.2 kHz family)
+//   internal_mclk  : alias of audio_clk inside this module
+//
+// Note: In this single-clock variant, top-level clocking chooses the family
+// (48/96 kHz or 44.1/88.2 kHz) and feeds the selected clock to audio_clk.
 //
 // Register Map
 // ------------
@@ -71,10 +76,8 @@ module i2s_slave_lite_v1_0_S00_AXI #
     parameter integer C_S_AXI_ADDR_WIDTH = 4
 )
 (
-    // Audio clock inputs — both must be running before ENABLE is asserted.
-    // Provided by the MMCM/PLL Clock Wizard in the top-level block design.
-    input  wire audio_48_clk,   // 24.576 MHz  — 48/96 kHz Fs family
-    input  wire audio_44_clk,   // 22.579 MHz  — 44.1/88.2 kHz Fs family
+    // Selected audio clock input (chosen at top-level clocking).
+    input  wire audio_clk,
 
     // I2S serial outputs — connect directly to PCM5102A PMOD pins.
     // MCLK is driven but the PCM5102A can operate without it (SCK mode).
@@ -134,7 +137,7 @@ module i2s_slave_lite_v1_0_S00_AXI #
 // ----------------------------------------------------------------------------
 // Slave register file — four 32-bit read/write registers.
 // Written by the AXI master and read back by the same master for verification.
-// slv_reg2 is also read combinatorially for the BUFGMUX select (reg_fs_family)
+// slv_reg2 is also read combinatorially for clock-select (reg_fs_family)
 // before CDC has settled, which is safe because only the clock-mux path uses
 // the raw value; all audio logic uses the CDC-synchronised ctrl_cdc_w.
 // ----------------------------------------------------------------------------
@@ -335,38 +338,12 @@ module i2s_slave_lite_v1_0_S00_AXI #
     reg [31:0] sample_right_q;
 
 // ----------------------------------------------------------------------------
-// Section 1 : Master clock selection (BUFGMUX) with proper CDC
+// Section 1 : Audio clock binding (single-clock input)
 //
-// FS_FAMILY (CONTROL bit 2) selects which MMCM output feeds the audio logic.
-// The select line is synchronised to S_AXI_ACLK (100 MHz system clock) before
-// driving BUFGMUX, eliminating metastability risk from AXI register writes.
-//
-//   fs_family_sync_q = 0 → audio_48_clk (24.576 MHz)
-//   fs_family_sync_q = 1 → audio_44_clk (22.579 MHz)
+// This module consumes one selected audio clock input (audio_clk), which keeps
+// the IP vendor-neutral and avoids internal clock-family switching logic.
 // ----------------------------------------------------------------------------
-    wire raw_fs_family = slv_reg2[2];
-    
-    (* ASYNC_REG = "TRUE" *) reg fs_family_stage1_q;
-    (* ASYNC_REG = "TRUE" *) reg fs_family_sync_q;
-    
-    always @(posedge S_AXI_ACLK) begin
-        if (S_AXI_ARESETN == 1'b0) begin
-            fs_family_stage1_q <= 1'b0;
-            fs_family_sync_q   <= 1'b0;
-        end else begin
-            fs_family_stage1_q <= raw_fs_family;
-            fs_family_sync_q   <= fs_family_stage1_q;
-        end
-    end
-    
-    wire internal_mclk;
-
-    BUFGMUX #(.CLK_SEL_TYPE("ASYNC")) mclk_mux (
-        .O  (internal_mclk),
-        .I0 (audio_48_clk),
-        .I1 (audio_44_clk),
-        .S  (fs_family_sync_q)
-    );
+    wire internal_mclk = audio_clk;
 
 // ----------------------------------------------------------------------------
 // Section 2 : Robust Clock Domain Crossing (CDC) — AXI → audio
@@ -421,7 +398,6 @@ module i2s_slave_lite_v1_0_S00_AXI #
 // ----------------------------------------------------------------------------
     wire       enable_sync       = ctrl_cdc_w[0];
     wire       mute_sync         = ctrl_cdc_w[1];
-    wire       fs_family_sync    = ctrl_cdc_w[2];
     wire       fs_mode_sync      = ctrl_cdc_w[3];
     wire [5:0] sample_width_sync = (ctrl_cdc_w[12:8] == 5'd0) ? 6'd32
                                                                : {1'b0, ctrl_cdc_w[12:8]};

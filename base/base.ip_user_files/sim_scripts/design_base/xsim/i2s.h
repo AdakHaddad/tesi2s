@@ -1,4 +1,3 @@
-
 #ifndef I2S_H
 #define I2S_H
 
@@ -32,7 +31,7 @@
  *
  */
 #define I2S_mWriteReg(BaseAddress, RegOffset, Data) \
-  	Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+	  Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
 
 /**
  *

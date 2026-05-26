@@ -3,12 +3,12 @@
 // SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 // Vivado v2025.2 (64-bit)
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-// Created on Friday May 08, 2026 - 05:36:32 pm, from:
+// Created on Wednesday May 13, 2026 - 03:12:06 am, from:
 //
 //     Map file     - c:\tesi2s\base\base.gen\sources_1\bd\design_base\design_base.bmm
 //     Data file(s) - c:/tesi2s/base/base.gen/sources_1/bd/design_base/ip/design_base_microblaze_riscv_0_0/data/riscv_bootloop.elf
 //
-// Address space 'design_base_i_microblaze_riscv_0.design_base_i_microblaze_riscv_0_local_memory_lmb_bram_128K_2_ADDR_SPACE', bit lane [31:0].
+// Address space 'design_base_i_microblaze_riscv_0.design_base_i_microblaze_riscv_0_local_memory_lmb_bram_ADDR_SPACE', bit lane [31:0].
 //
 // Bus width = 32 bits, number of bus blocks = 1.
 
