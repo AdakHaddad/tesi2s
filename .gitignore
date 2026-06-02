@@ -1,3 +1,70 @@
+# General
+*.log
+*.jou
+*.wdb
+*.rpt
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+.vs/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Vivado / Xilinx generated files and directories
+.Xil/
+.webtalk/
+*.jou
+*.log
+*.wdb
+*.str
+*.ltx
+*.backup
+*.backup.*
+*.xsim/
+*.runs/
+*.sim/
+*.gen/
+*.ip_user_files/
+*.hw/
+*.cache/
+*.xml
+*.bav
+
+# Bitstreams and intermediate outputs
+*.bit
+*.bin
+*.mcs
+*.dcp
+*.xsa
+*.xci
+*.checkpoint
+*.ngc
+
+# Vitis / SDK
+.sdk/
+.vitis/
+*.elf
+
+# Misc
+*.pyc
+*.class
+README.html
 # Aider
 .aider*
 
