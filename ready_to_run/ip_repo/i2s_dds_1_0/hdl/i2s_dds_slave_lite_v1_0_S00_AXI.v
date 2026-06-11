@@ -35,6 +35,7 @@
 //                                        Values 1-31 are literal bit-widths.
 //                                        Value 0 encodes 32 bits (field is 5 b).
 //   26:7     SAMPLE_RATE_HZ   48000      Target sample rate in Hz.
+//                                        Encoded range is 0..1,048,575 Hz.
 //                                        Value 0 defaults to 48000 Hz.
 //                                        Capped at MAX_SAFE_FS_HZ (195312 Hz).
 //   31:27    RESERVED         0          Ignored on write; read as zero.
@@ -58,7 +59,7 @@
 //
 // ============================================================================
 
-module i2s_axi_lite #
+module i2s_dds_slave_lite_v1_0_S00_AXI #
 (
     // Width of AXI data bus — keep at 32 for a 32-bit address map.
     parameter integer C_S_AXI_DATA_WIDTH = 32,
@@ -137,6 +138,16 @@ module i2s_axi_lite #
     localparam [1:0] REG_DATA_RIGHT = 2'h1;  // 0x04
     localparam [1:0] REG_CONTROL    = 2'h2;  // 0x08
     localparam [1:0] REG_STATUS     = 2'h3;  // 0x0C
+
+    // CONTROL register bitfield map (offset 0x08)
+    localparam integer CTRL_ENABLE_BIT         = 0;
+    localparam integer CTRL_MUTE_BIT           = 1;
+    localparam integer CTRL_SAMPLE_WIDTH_LSB   = 2;
+    localparam integer CTRL_SAMPLE_WIDTH_MSB   = 6;
+    localparam integer CTRL_SAMPLE_RATE_HZ_LSB = 7;
+    localparam integer CTRL_SAMPLE_RATE_HZ_MSB = 26;
+    localparam integer CTRL_RESERVED_MSB       = 31;
+    localparam integer CTRL_RESERVED_LSB       = 27;
 
     // Read mask for CONTROL: zero-out RESERVED bits [31:27] on readback
     localparam [31:0] CONTROL_MASK    = 32'h07FF_FFFF;
@@ -323,7 +334,7 @@ module i2s_axi_lite #
                         if (S_AXI_WSTRB[byte_index])
                             slv_reg2[(byte_index*8) +: 8] <=
                                 S_AXI_WDATA[(byte_index*8) +: 8];
-                    slv_reg2[31:27] <= 5'd0;  // enforce RESERVED = 0
+                    slv_reg2[CTRL_RESERVED_MSB:CTRL_RESERVED_LSB] <= 5'd0;  // enforce RESERVED = 0
                 end
 
                 REG_STATUS: begin
@@ -434,20 +445,20 @@ module i2s_axi_lite #
 // ============================================================================
 
     // Bit 0: transmit enable
-    wire        enable_sync = slv_reg2[0];
+    wire        enable_sync = slv_reg2[CTRL_ENABLE_BIT];
 
     // Bit 1: mute — keeps clocks running but sends zeros
-    wire        mute_sync   = slv_reg2[1];
+    wire        mute_sync   = slv_reg2[CTRL_MUTE_BIT];
 
     // Bits [6:2]: sample width in bits per channel.
     //   A raw value of 0 encodes 32 bits (field is only 5 bits wide).
-    wire [4:0]  sample_width_raw  = slv_reg2[6:2];
+    wire [4:0]  sample_width_raw  = slv_reg2[CTRL_SAMPLE_WIDTH_MSB:CTRL_SAMPLE_WIDTH_LSB];
     wire [5:0]  sample_width_sync = (sample_width_raw == 5'd0) ? 6'd32
                                                                 : {1'b0, sample_width_raw};
 
     // Bits [26:7]: target sample rate in Hz.
     //   0 → default to 48000 Hz.  Values above MAX_SAFE_FS_HZ are capped.
-    wire [19:0] sample_rate_raw     = slv_reg2[26:7];
+    wire [19:0] sample_rate_raw     = slv_reg2[CTRL_SAMPLE_RATE_HZ_MSB:CTRL_SAMPLE_RATE_HZ_LSB];
     wire [19:0] sample_rate_nonzero = (sample_rate_raw == 20'd0)
                                       ? DEFAULT_SAMPLE_RATE_HZ
                                       : sample_rate_raw;
