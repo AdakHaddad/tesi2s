@@ -22,9 +22,6 @@ module i2s_dds #
     parameter integer C_S00_AXI_ADDR_WIDTH = 4
 )
 (
-    // Legacy dual audio clock inputs (kept for block-design compatibility).
-    input  wire audio_48_clk,
-    input  wire audio_44_clk,
     // I2S serial outputs — connect directly to PCM5102A PMOD pins.
     // MCLK is driven but the PCM5102A can operate without it (SCK mode).
     output wire i2s_mclk,
@@ -61,8 +58,6 @@ module i2s_dds #
         .C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
         .C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
     ) i2s_dds_slave_lite_v1_0_S00_AXI_inst (
-        .audio_48_clk      (audio_48_clk),
-        .audio_44_clk      (audio_44_clk),
         .i2s_mclk          (i2s_mclk),
         .i2s_bclk          (i2s_bclk),
         .i2s_ws            (i2s_ws),

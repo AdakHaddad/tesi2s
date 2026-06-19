@@ -69,12 +69,6 @@ module i2s_dds_slave_lite_v1_0_S00_AXI #
 )
 (
     // ------------------------------------------------------------------
-    // Legacy audio clock inputs (unused by DDS logic, kept for BD compat)
-    // ------------------------------------------------------------------
-    input  wire audio_48_clk,   // ~24.576 MHz  (for 48 kHz family)
-    input  wire audio_44_clk,   // ~22.579 MHz  (for 44.1 kHz family)
-
-    // ------------------------------------------------------------------
     // I2S output pins
     // ------------------------------------------------------------------
     output wire i2s_mclk,       // Master clock  (256 × Fs)
@@ -706,14 +700,12 @@ module i2s_dds_slave_lite_v1_0_S00_AXI #
 // ============================================================================
 // Section 19 — Unused Input Suppression
 //
-//   The audio_48_clk / audio_44_clk ports and PROT signals are accepted for
-//   block-design pin-compatibility but carry no functional meaning in this
-//   DDS-based implementation.  The XOR expression prevents synthesis from
-//   issuing undriven-input warnings while generating zero logic.
+//   The PROT signals are accepted for block-design pin-compatibility but carry
+//   no functional meaning. The XOR expression prevents synthesis from issuing
+//   undriven-input warnings while generating zero logic.
 // ============================================================================
 
-    wire _unused_ok = audio_48_clk  ^ audio_44_clk    ^
-                      S_AXI_AWPROT[0] ^ S_AXI_AWPROT[1] ^ S_AXI_AWPROT[2] ^
+    wire _unused_ok = S_AXI_AWPROT[0] ^ S_AXI_AWPROT[1] ^ S_AXI_AWPROT[2] ^
                       S_AXI_ARPROT[0] ^ S_AXI_ARPROT[1] ^ S_AXI_ARPROT[2];
 
 endmodule
